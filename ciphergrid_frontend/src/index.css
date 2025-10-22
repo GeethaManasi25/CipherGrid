@@ -1,0 +1,358 @@
+/* --- GLOBAL STYLES --- */
+:root {
+  --brand-teal: #0e7490;
+  --brand-orange: #ea580c;
+  --brand-light-bg: #f5f7fa;
+  --brand-dark: #0f172a;
+  --brand-accent: #f97316;
+  --text-dark: #1e293b;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--brand-light-bg);
+  color: var(--text-dark);
+  min-height: 100vh;
+}
+
+/* --- NAVBAR --- */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #059669, #ea580c);
+  color: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav h1 {
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.nav-links a:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+/* --- PAGE CONTAINER --- */
+.container {
+  padding: 2.5rem 3rem;
+}
+
+/* --- TITLES --- */
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--brand-dark);
+  margin-bottom: 1.5rem;
+}
+
+.panel-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--brand-teal);
+  margin-bottom: 1rem;
+}
+
+/* --- PANELS --- */
+.panel {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+}
+
+/* --- TEXTAREA --- */
+.text-area {
+  width: 100%;
+  min-height: 130px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  font-family: "Courier New", monospace;
+  padding: 0.8rem;
+  font-size: 0.95rem;
+  resize: vertical;
+  color: var(--brand-dark);
+  background-color: #f9fafb;
+}
+
+/* --- BUTTONS --- */
+.btn-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.btn {
+  background-color: var(--brand-teal);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.6rem 1.5rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(14, 116, 144, 0.3);
+}
+
+.btn:hover {
+  background-color: #155e75;
+  transform: translateY(-2px);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* --- RESULTS BOX --- */
+.result-box {
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #0f172a;
+  font-weight: 500;
+}
+
+.result-box p {
+  margin: 0.3rem 0;
+}
+
+/* --- TAGS --- */
+.tag {
+  display: inline-block;
+  padding: 0.25rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-left: 0.4rem;
+}
+
+.tag.low {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.tag.medium {
+  background-color: #fef9c3;
+  color: #92400e;
+}
+
+.tag.high {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.tag.critical {
+  background-color: #f87171;
+  color: white;
+}
+
+/* --- DASHBOARD CARDS --- */
+.stats-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.07);
+  padding: 1rem 1.5rem;
+  width: 220px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.stat-title {
+  font-size: 1rem;
+  color: var(--brand-teal);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--brand-dark);
+}
+
+/* --- HOME PAGE --- */
+.home-hero {
+  background: linear-gradient(to right, #0891b2, #ea580c);
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+  border-radius: 0 0 20px 20px;
+}
+
+.home-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+}
+
+.home-hero p {
+  font-size: 1.15rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.hero-buttons .btn {
+  font-size: 1rem;
+  padding: 0.7rem 1.6rem;
+  border-radius: 50px;
+}
+
+/* --- INSIGHTS CHART --- */
+.chart-panel {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  margin-top: 1.5rem;
+}
+
+.chart-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--brand-teal);
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .stats-container {
+    flex-direction: column;
+  }
+}
+/* --- HOME PAGE ENHANCEMENTS --- */
+
+.home-container {
+  padding: 2rem 3rem;
+}
+
+.home-header {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.welcome-text {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.tagline {
+  font-size: 1.15rem;
+  color: #334155;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.btn-ingest {
+  background-color: var(--brand-teal);
+}
+
+.btn-insights {
+  background-color: var(--brand-teal);
+}
+
+/* --- FEATURES SECTION --- */
+.features-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 1.8rem 1.5rem;
+  text-align: center;
+  width: 320px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.12);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  color: var(--brand-orange);
+  margin-bottom: 0.8rem;
+}
+
+.feature-title {
+  font-size: 1.2rem;
+  color: var(--brand-teal);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
+}
