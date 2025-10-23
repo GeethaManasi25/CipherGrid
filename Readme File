@@ -1,0 +1,125 @@
+⚡ CipherGrid – AI-Powered Anomaly Detection & Threat Response
+
+A smart and secure AI system for detecting, classifying, and mitigating cyber threats in critical energy infrastructure.
+
+🌐 Overview
+
+CipherGrid is a research-driven project developed for Swinburne University (Semester 4, 2025).
+It focuses on building an AI-based anomaly detection framework that monitors Operational Technology (OT) network protocols like IEC 61850, DNP3, and Modbus, identifying potential attacks in real-time and suggesting mitigation responses.
+
+The project integrates Machine Learning (ML), streaming data pipelines, and a web-based visualization dashboard to enable early detection of malicious activities in smart-grid environments.
+
+🧩 Features
+
+✅ Real-time anomaly detection across OT protocols
+✅ Multi-model ML architecture (Autoencoder, Isolation Forest, One-Class SVM)
+✅ Threat classification (False Data Injection, Spoofing, Replay)
+✅ Interactive dashboard for live monitoring
+✅ Secure communication and compliance with NIST & IEC standards
+✅ Scalable microservice architecture
+
+🏗️ System Architecture
+Sensors / OT Nodes → Kafka → Flask API → ML Engine → PostgreSQL → Dashboard
+
+
+Each component contributes as follows:
+
+Kafka: Real-time data ingestion
+
+Flask API: Preprocessing and event handling
+
+ML Engine: Detects anomalies and assigns risk scores
+
+PostgreSQL: Stores logs and events
+
+Dashboard: Visualizes alerts and threat metrics
+
+🧠 Machine Learning Models
+Model	Description	Purpose
+Autoencoder	Learns normal data and detects deviations	Detect unknown attacks
+Isolation Forest	Isolates outliers using random partitions	Detect anomalies in high-dimensional data
+One-Class SVM	Defines a hypersphere around normal data	Detect minor irregularities
+
+Performance:
+
+Accuracy: 94%
+
+Precision: 92%
+
+Latency: < 1 second
+
+🧰 Tech Stack
+Layer	Technology
+Frontend	React.js + Chakra UI
+Backend	Flask (Python)
+Streaming	Apache Kafka
+Database	PostgreSQL
+Machine Learning	Scikit-learn, PyTorch
+Security	TLS 1.3, AES-256
+Deployment	Localhost / Cloud-ready
+🔬 Protocol Understanding
+Protocol	Normal Behavior	Attack Behavior	Extracted ML Features
+IEC 61850	≤4ms GOOSE timing	Spoofed or delayed GOOSE	Sequence timing
+Modbus	Valid function codes	Tampered register values	Function frequency
+DNP3	Reliable index order	Replay/injection attacks	Retry count, coherence
+🖥️ Dashboard Visualization
+
+Real-time event feed and alerts
+
+Threat-severity levels: Low / Medium / High
+
+Risk trend analytics
+
+Downloadable compliance reports
+
+🚀 Getting Started
+1️⃣ Clone Repository
+git clone https://github.com/YourUsername/CipherGrid.git
+cd CipherGrid
+
+2️⃣ Set Up Python Environment
+python -m venv venv
+source venv/bin/activate  # (or venv\Scripts\activate on Windows)
+pip install -r requirements.txt
+
+3️⃣ Run Flask Server
+python app.py
+
+4️⃣ Launch React Frontend
+cd frontend
+npm install
+npm start
+
+5️⃣ Access the Dashboard
+
+Open http://localhost:3000
+ in your browser.
+
+🧾 Project Structure
+CipherGrid/
+├── backend/
+│   ├── app.py
+│   ├── models/
+│   ├── static/
+│   └── templates/
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   └── package.json
+├── datasets/
+├── notebooks/
+├── docs/
+│   ├── CipherGrid_Final_Enhanced_TechGreen.pptx
+│   ├── SRS_Document.pdf
+│   └── README.md
+└── requirements.txt
+
+🧑‍💻 Team MA5
+Name	Role
+Abdul Samad Mohammed	Protocol Understanding & Dashboard Support
+Geetha Manasi Natarajan	Backend Flask API and Frontend Visualization (Dashboard)
+Berk Burali	ML Model Development
+Kevil Pansuriya	ML Model Evaluation
+Ansh Srivastava	Data Collection / Threat Classification
+Md Mahidur Rahman	Protocol Analysis / Threat Mapping
+Sakshyam Neupane	System Architecture & Documentation
