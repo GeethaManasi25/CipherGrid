@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../ciphergrid_backend"
+		},
+		{
+			"path": "../ciphergrid_frontend"
+		}
+	],
+	"settings": {}
+}

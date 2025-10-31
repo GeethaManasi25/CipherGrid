@@ -1,0 +1,20 @@
+{
+  // Tell VS Code / Pylance where your backend packages live
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}",
+    "${workspaceFolder}/ciphergrid_backend"
+  ],
+
+  // Make sure VS Code terminals can also import your backend modules
+  "terminal.integrated.env.windows": {
+    "PYTHONPATH": "${workspaceFolder}"
+  },
+
+  // Optional: select your backend virtual environment automatically
+  "python.defaultInterpreterPath": "${workspaceFolder}/ciphergrid_backend/venv/Scripts/python.exe",
+
+  // Optional: silence missing import warnings if you prefer
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportMissingImports": "none"
+  }
+}
